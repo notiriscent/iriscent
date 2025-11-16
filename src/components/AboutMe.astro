@@ -1,0 +1,89 @@
+---
+
+import { Font } from 'astro:assets';
+import { Content as AboutMeText } from './AboutMe.md';
+
+---
+
+<Font cssVariable='--font-dm-sans' preload />
+
+<div class="about">
+    <p class="hello">hello, i'm <span class="name">iris</span></p>
+    <p class="scroll" id="scroll-text">scroll down!</p>
+    <span class="about-me" id="scroll">
+        <AboutMeText />
+        <audio controls src="https://iriscent.s-ul.eu/AVMBlD9a"></audio>
+    </span>
+    
+</div>
+
+<script>
+    const target = document.getElementById('scroll');
+    const scrollText = document.getElementById('scroll-text');
+
+    const observer = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+            scrollText?.classList.add('fade');
+        } else {
+            scrollText?.classList.remove('fade');
+        }
+    });
+
+    observer.observe(target);
+</script>
+
+<style>
+    .about {
+        margin: 0 28px;
+        font-family: var(--font-dm-sans);
+    }
+
+    .hello {
+        font-size: 64px;
+        font-weight: 500;
+    }
+
+    .name {
+        font-weight: bold;
+        letter-spacing: 3px;
+        background-color: #181824;
+        padding: 0 8px;
+        border-right: 6px solid white;
+        animation: blinker 0.5s steps(2, end) infinite alternate;
+    }
+
+    @keyframes blinker {
+        from {
+            border-color: transparent; 
+        } to {
+            border-color: white;
+        }
+    }
+
+    .scroll {
+        margin-top: -115px;
+        text-align: right;
+        font-weight: 500;
+        transition: opacity 0.2s ease-out;
+    }
+
+    .fade {
+        opacity: 0;
+    }
+
+    .about-me {
+        display: block;
+        margin-top: 100px;
+        font-size: 24px;
+    }
+
+    audio {
+        padding: 12px 0;
+    }
+</style>
+
+<style is:global>
+  .about-me a {
+    color: white;
+  }
+</style>

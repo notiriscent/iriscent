@@ -1,0 +1,28 @@
+---
+
+import { Image } from 'astro:assets';
+import banner from '../assets/banner.png';
+import PFP from '../components/ProfilePicture.astro';
+
+---
+
+<div class="header">
+    <Image src={banner} class="banner" alt="A profile banner." loading="eager" />
+    <PFP />
+</div>
+
+<style>
+    .banner {
+        width: 100vw;
+        height: auto;
+        aspect-ratio: 4 / 1;
+        border-bottom: 2px white solid;
+        box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+</style>

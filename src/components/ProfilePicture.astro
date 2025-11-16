@@ -1,0 +1,16 @@
+---
+
+import { Image } from 'astro:assets';
+import Pfp from '../assets/pfp.jpeg';
+
+---
+
+<Image src={Pfp} alt="Avatar" class="pfp" loading="eager" />
+<style>
+    .pfp {
+        border-radius: 36px;
+        margin: -128px 0 0 32px;
+        border: 2px white solid;
+        box-shadow: 0 0 4px rgba(255, 255, 255, 0.267);
+    }
+</style>
