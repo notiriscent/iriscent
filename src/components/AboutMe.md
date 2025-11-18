@@ -12,7 +12,7 @@ languages: en/ru ;
 
 **[BattlePrizrak](https://osu.ppy.sh/u/BattlePrizrak)** - mapping genius, got me into osu!  
 
-**[Invalidated](https://osu.ppy.sh/u/Invalidated)** - local dipshit (бiг боб)  
+**[Invalidated](https://osu.ppy.sh/u/Invalidated)** - бiг боб ёмi ёрi)
 
 **[nexutoo](https://osu.ppy.sh/u/nexutoo)** - нехута)  
 
@@ -23,3 +23,5 @@ languages: en/ru ;
 **discord**: **@iriscent** OR better yet, join my [**discord server**](https://discord.gg/rsUuYhe9nB) (russian only) 
 
 ## [setup/game settings (click)](https://osusettings.top/u/1693)
+
+# **сотаркс сын бляди ебанутой**
